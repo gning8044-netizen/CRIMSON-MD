@@ -21,7 +21,7 @@ export default {
             try {
                 groupPic = await sock.profilePictureUrl(jid, 'image');
             } catch {
-                groupPic = 'https://i.ibb.co/SDd09XR9/425104bcd93b.jpg';
+                groupPic = 'https://files.catbox.moe/zqr8he.jpeg';
             }
 
             if (commandName === 'tagall' || commandName === 'everyone') {
@@ -47,7 +47,7 @@ async function handleTagAll(sock, msg, args, phoneNumber, groupPic) {
     const date = now.toLocaleDateString('fr-FR');
     const time = now.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
 
-    let text = `❤️ *L O V E - X D - B O T* ❤️\n\n`;
+    let text = `👹 *𝑪𝑹𝑰𝑴𝑺𝑶𝑵-𝑴𝑫-𝑩𝑶𝑻* 👺\n\n`;
     
     if (customMessage) {
         text += `📝 *Message:* ${customMessage}\n\n`;
@@ -67,7 +67,7 @@ async function handleTagAll(sock, msg, args, phoneNumber, groupPic) {
     }
     
     text += `└─⊷⊷⊷⊷⊷⊷⊷⊷⊷⊷⊷⊷⊷⊷\n\n`;
-    text += `⚡ *Powered By DarkMods* ⚡`;
+    text += `⚡ *Crée Par Dev Shadow Tech* ⚡`;
 
     await sock.sendMessage(jid, {
         text: text,
@@ -101,8 +101,8 @@ async function handleHideTag(sock, msg, args, phoneNumber, groupPic) {
         text += `└─⊷⊷⊷⊷⊷⊷⊷⊷⊷⊷⊷⊷⊷⊷\n\n`;
         text += `👥 *Mentionne ${participants.length} Membres*`;
     } else {
-        const msgContent = customMessage || '🔔 Attention Tous Les Membres !';
-        text = `🌟 *LOVE-XD HIDETAG* 🌟\n\n`;
+        const msgContent = customMessage || '🔔 Attention Tous Les Membres Du Clan Crimson !';
+        text = `🌟 *CRIMSON-MD* 🌟\n\n`;
         text += `┌─⊷⊷⊷⊷⊷⊷⊷⊷⊷⊷⊷⊷⊷⊷\n`;
         text += `│ ${msgContent}\n`;
         text += `└─⊷⊷⊷⊷⊷⊷⊷⊷⊷⊷⊷⊷⊷⊷\n\n`;

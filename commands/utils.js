@@ -104,7 +104,7 @@ async function handleGetPP(sock, msg, args, phoneNumber) {
                            `• Répondre à un message: !getpp → Photo de l'utilisateur\n` +
                            `• Mentionner: !getpp @user → Photo de l'utilisateur\n` +
                            `• Numéro: !getpp 237xxx → Photo du contact\n\n` +
-                           `> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐃𝐚𝐫𝐤𝐌𝐨𝐝𝐬`;
+                           `> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 DEV SHADOW TECH`;
             return await sendReply(sock, jid, helpMsg, { quoted: msg });
         }
 
@@ -119,7 +119,7 @@ async function handleGetPP(sock, msg, args, phoneNumber) {
             if (err.message.includes('404') || err.message.includes('not-found')) {
                 await sock.sendMessage(jid, { react: { text: '❌', key: msg.key } });
                 return await sendReply(sock, jid, 
-                    `❌ ${isGroupPic ? 'Ce groupe' : targetName} n'a pas de photo de profil.\n\n> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐃𝐚𝐫𝐤𝐌𝐨𝐝𝐬`, 
+                    `❌ ${isGroupPic ? 'Ce groupe' : targetName} n'a pas de photo de profil.\n\n> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 DEV SHADOW TECH`, 
                     { quoted: msg }
                 );
             }
@@ -129,7 +129,7 @@ async function handleGetPP(sock, msg, args, phoneNumber) {
         if (!ppUrl) {
             await sock.sendMessage(jid, { react: { text: '❌', key: msg.key } });
             return await sendReply(sock, jid, 
-                `❌ ${isGroupPic ? 'Ce groupe' : targetName} n'a pas de photo de profil.\n\n> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐃𝐚𝐫𝐤𝐌𝐨𝐝𝐬`, 
+                `❌ ${isGroupPic ? 'Ce groupe' : targetName} n'a pas de photo de profil.\n\n> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 DEV SHADOW TECH`, 
                 { quoted: msg }
             );
         }
@@ -137,7 +137,7 @@ async function handleGetPP(sock, msg, args, phoneNumber) {
         // Envoyer la photo
         await sock.sendMessage(jid, {
             image: { url: ppUrl },
-            caption: `📸 Photo de profil: ${targetName}\n\n> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐃𝐚𝐫𝐤𝐌𝐨𝐝𝐬`
+            caption: `📸 Photo de profil: ${targetName}\n\n> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 DEV SHADOW TECH`
         }, { quoted: msg });
 
         await sock.sendMessage(jid, { react: { text: '✅', key: msg.key } });
@@ -164,7 +164,7 @@ async function handleSetPP(sock, msg, args, phoneNumber) {
                            `• Répondez à une image avec: !setpp\n` +
                            `• Pour le groupe: Le bot doit être admin\n` +
                            `• Pour le bot: Photo de profil du bot\n\n` +
-                           `> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐃𝐚𝐫𝐤𝐌𝐨𝐝𝐬`;
+                           `> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 DEV SHADOW TECH`;
             return await sendReply(sock, jid, helpMsg, { quoted: msg });
         }
 
@@ -198,14 +198,14 @@ async function handleSetPP(sock, msg, args, phoneNumber) {
             if (!isAdmin) {
                 await sock.sendMessage(jid, { react: { text: '❌', key: msg.key } });
                 return await sendReply(sock, jid, 
-                    formatError('❌ Le bot doit être admin pour changer la photo du groupe.\n\n> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐃𝐚𝐫𝐤𝐌𝐨𝐝𝐬'), 
+                    formatError('❌ Le bot doit être admin pour changer la photo du groupe.\n\n> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 DEV SHADOW TECH'), 
                     { quoted: msg }
                 );
             }
             
             await sock.updateProfilePicture(jid, buffer);
             await sendReply(sock, jid, 
-                formatSuccess('✅ Photo de profil du groupe mise à jour avec succès!\n\n> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐃𝐚𝐫𝐤𝐌𝐨𝐝𝐬'), 
+                formatSuccess('✅ Photo de profil du groupe mise à jour avec succès!\n\n> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 DEV SHADOW TECH'), 
                 { quoted: msg }
             );
         } else {
@@ -213,7 +213,7 @@ async function handleSetPP(sock, msg, args, phoneNumber) {
             const botJid = sock.user.id.split(':')[0] + '@s.whatsapp.net';
             await sock.updateProfilePicture(botJid, buffer);
             await sendReply(sock, jid, 
-                formatSuccess('✅ Photo de profil du bot mise à jour avec succès!\n\n> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐃𝐚𝐫𝐤𝐌𝐨𝐝𝐬'), 
+                formatSuccess('✅ Photo de profil du bot mise à jour avec succès!\n\n> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 DEV SHADOW TECH'), 
                 { quoted: msg }
             );
         }
@@ -226,7 +226,7 @@ async function handleSetPP(sock, msg, args, phoneNumber) {
         
         if (error.message.includes('forbidden') || error.message.includes('403')) {
             return await sendReply(sock, jid, 
-                formatError('❌ Permission refusée. Le bot doit être admin pour changer la photo du groupe.\n\n> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐃𝐚𝐫𝐤𝐌𝐨𝐝𝐬'), 
+                formatError('❌ Permission refusée. Le bot doit être admin pour changer la photo du groupe.\n\n> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 DEV SHADOW TECH'), 
                 { quoted: msg }
             );
         }
@@ -263,7 +263,7 @@ async function handleJID(sock, msg, phoneNumber) {
                         `👑 *Admins:* ${admins.length}\n` +
                         `📅 *Créé le:* ${new Date(metadata.creation * 1000).toLocaleDateString('fr-FR')}\n` +
                         `🔑 *Propriétaire:* ${metadata.owner ? '@' + metadata.owner.split('@')[0] : 'Non défini'}\n\n` +
-                        `> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐃𝐚𝐫𝐤𝐌𝐨𝐝𝐬`;
+                        `> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 DEV SHADOW TECH`;
 
         await sendReply(sock, jid, response, { 
             quoted: msg,
@@ -292,7 +292,7 @@ async function handleIDCH(sock, msg, phoneNumber) {
                            `• Allez dans une chaîne WhatsApp\n` +
                            `• Envoyez la commande: !idch\n` +
                            `• Le bot vous donnera l'ID de la chaîne\n\n` +
-                           `> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐃𝐚𝐫𝐤𝐌𝐨𝐝𝐬`;
+                           `> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 DEV SHADOW TECH`;
             return await sendReply(sock, jid, helpMsg, { quoted: msg });
         }
 
@@ -336,7 +336,7 @@ async function handleIDCH(sock, msg, phoneNumber) {
                    `  - Cibler cette chaîne avec des commandes\n` +
                    `  - Configurer des fonctionnalités spécifiques\n` +
                    `  - Partager l'identifiant unique de la chaîne\n\n` +
-                   `> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐃𝐚𝐫𝐤𝐌𝐨𝐝𝐬`;
+                   `> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 DEV SHADOW TECH`;
 
         // Envoyer la réponse
         await sendReply(sock, jid, response, { quoted: msg });
@@ -356,7 +356,7 @@ async function handleIDCH(sock, msg, phoneNumber) {
         errorMsg += `• D'être dans une chaîne WhatsApp valide\n`;
         errorMsg += `• Que la chaîne est accessible\n`;
         errorMsg += `• Que le bot a les permissions nécessaires\n\n`;
-        errorMsg += `> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐃𝐚𝐫𝐤𝐌𝐨𝐝𝐬`;
+        errorMsg += `> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 DEV SHADOW TECH`;
         
         await sendReply(sock, jid, errorMsg, { quoted: msg });
         throw error;

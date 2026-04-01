@@ -5,7 +5,7 @@ const config = {
     // Configuration de base
     prefix: process.env.BOT_PREFIX || '!',
     owner: process.env.BOT_OWNER || 'numero telephone',  //For The Paring Code 
-    ownerName: process.env.BOT_OWNER_NAME || '𝐃𝐚𝐫𝐤𝐌𝐨𝐝𝐬-𝐍𝐞𝐦𝐞𝐬𝐢𝐬⁰⁰⁷',  //(Don't Touch Or Change)
+    ownerName: process.env.BOT_OWNER_NAME || 'DEV SHADOW TECH',  //(Don't Touch Or Change)
     
     // Session
     sessionDir: process.env.SESSION_DIR || 'session',

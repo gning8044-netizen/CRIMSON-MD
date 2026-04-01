@@ -45,8 +45,8 @@ export default {
             await Database.updateUserSettings({ bot_mode: newMode });
             
             const modeText = newMode === 'private' ? 
-                '🔒 PRIVATE - Only you can use commands' : 
-                '🔓 PUBLIC - Everyone can use commands';
+                '🔒 PRIVATE - Bot du clan crimson' : 
+                '🔓 PUBLIC - Bot du clan crimson';
                 
             await sendReply(sock, jid, 
                 formatSuccess(modeText), 

@@ -70,20 +70,20 @@ async function convertToImage(sock, msg, buffer, phoneNumber) {
             if (firstFrame) {
                 await sock.sendMessage(jid, {
                     image: firstFrame,
-                    caption: '> convert\n\n> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐃𝐚𝐫𝐤𝐌𝐨𝐝𝐬'
+                    caption: '> convert\n\n> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 DEV SHADOW TECH'
                 }, { quoted: msg });
             } else {
                 // Fallback: envoyer le WebP directement
                 await sock.sendMessage(jid, {
                     image: buffer,
-                    caption: '> convert\n\n> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐃𝐚𝐫𝐤𝐌𝐨𝐝𝐬'
+                    caption: '> convert\n\n> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 DEV SHADOW TECH'
                 }, { quoted: msg });
             }
         } else {
             // Sticker statique normal
             await sock.sendMessage(jid, {
                 image: buffer,
-                caption: '> convert\n\n> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐃𝐚𝐫𝐤𝐌𝐨𝐝𝐬'
+                caption: '> convert\n\n> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 DEV SHADOW TECH'
             }, { quoted: msg });
         }
         
@@ -112,7 +112,7 @@ async function convertToVideo(sock, msg, buffer, phoneNumber) {
             if (videoBuffer) {
                 await sock.sendMessage(jid, {
                     video: videoBuffer,
-                    caption: '> convert\n\n> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐃𝐚𝐫𝐤𝐌𝐨𝐝𝐬'
+                    caption: '> convert\n\n> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 DEV SHADOW TECH'
                 }, { quoted: msg });
             } else {
                 throw new Error('Impossible de convertir le sticker animé');
@@ -125,7 +125,7 @@ async function convertToVideo(sock, msg, buffer, phoneNumber) {
             
             await sock.sendMessage(jid, {
                 video: videoBuffer,
-                caption: '> convert\n\n> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐃𝐚𝐫𝐤𝐌𝐨𝐝𝐬'
+                caption: '> convert\n\n> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 DEV SHADOW TECH'
             }, { quoted: msg });
         }
         

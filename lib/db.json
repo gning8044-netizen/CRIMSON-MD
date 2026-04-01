@@ -1,0 +1,17 @@
+{
+  "settings": {
+    "prefix": "!",
+    "bot_name": "𝑪𝑹𝑰𝑴𝑺𝑶𝑵-𝑴𝑫",
+    "bot_mode": "private",
+    "language": "en",
+    "antidelete_enabled": false,
+    "autoreact_enabled": true,
+    "menu_image": "https://files.catbox.moe/zqr8he.jpeg",
+    "https://files.catbox.moe/wv1m7n.jpeg"
+  },
+  "groups": {},
+  "sudoUsers": [],
+  "premiumUsers": [],
+  "userMedia": {},
+  "userWarnings": {}
+}

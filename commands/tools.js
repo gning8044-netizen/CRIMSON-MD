@@ -290,7 +290,7 @@ async function handleGetMail(sock, msg, sessionId, phoneNumber) {
             message += `📭 No emails\n`;
         }
         
-        message += `\n> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐃𝐚𝐫𝐤𝐌𝐨𝐝𝐬`;
+        message += `\n> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 DEV SHADOW TECH`;
 
         await sendReply(sock, jid, message, { quoted: msg });
         await sock.sendMessage(jid, { react: { text: '✅', key: msg.key } });
